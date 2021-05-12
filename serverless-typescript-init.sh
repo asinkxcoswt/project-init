@@ -10,9 +10,6 @@ rm package.json
 npx sls create --template aws-nodejs-typescript
 
 echo "node_modules" > .gitignore
-git init
-git add --all
-git commit -m "init project with sls template aws-nodejs-typescript"
 
 yarn add --dev eslint-config-airbnb-base
 npx install-peerdeps --dev eslint-config-airbnb-base --yarn
@@ -68,3 +65,6 @@ npx husky add .husky/pre-commit "npx lint-staged"
 yarn add --dev @commitlint/{config-conventional,cli}
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" >commitlint.config.js
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
+
+git add --all
+git commit -m "chore: initialize project with asinkxcoswt/project-init/main/serverless-typescript-init.sh"
