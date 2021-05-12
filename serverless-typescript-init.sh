@@ -104,6 +104,7 @@ setup_ignore() {
     echo "commitlint.config.js" >>.eslintignore
     echo ".lintstagedrc" >>.prettierignore
     echo "yarn.lock" >>.prettierignore
+    echo ".nvmrc" >>.prettierignore
     echo "node_modules" > .gitignore
 }
 
