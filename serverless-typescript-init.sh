@@ -16,7 +16,7 @@ alert() {
 setup_serverless() {
     set -e
     alert "Set up serverless typescript ..."
-
+    git init
     yarn init -y
     yarn add serverless
     rm package.json
@@ -107,11 +107,10 @@ setup_ignore() {
     echo "node_modules" > .gitignore
 }
 
-setup_git() {
+git_commit() {
     set -e
     alert "Try to commit, please fix any error manually"
 
-    git init
     git add --all
     git commit -m "chore: initialize project with asinkxcoswt/project-init/main/serverless-typescript-init.sh"
 }
@@ -122,4 +121,4 @@ setup_serverless \
 && setup_husky \
 && setup_commitlint \
 && setup_ignore \
-&& setup_git
+&& git_commit
